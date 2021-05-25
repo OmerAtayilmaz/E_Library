@@ -1,0 +1,28 @@
+<div class="col-sm-4 float-left">
+    <div class="card  m-1">
+      <div class="card-container">
+        <div class="card-header text-center">
+          <h6>{%BOOK%}</h6>
+          <div class="alert alert-primary alert-dismissable fade show py-3 my-3">
+            <small>Beğenilme Yüzdesi:
+              <div class="progress my-2">
+                <div class="progress-bar bg-primary progressbar-striped progress-bar-animated" {%PROCESS%}>{%CREDIT%}%</div>
+              </div>
+              <span class="badge-primary badge-pill">{%READ%} Defa Okundu</span>
+            </small>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="list-group ">
+            <li class="list-group-item">Book: {%BOOK%}</li>
+            <li class="list-group-item">Author: {%AUTHOR%}</li>
+            <li class="list-group-item">Credit: {%CREDIT%}</li>
+            <li class="list-group-item">Sort: {%SORT%}</li>
+          </ul>
+        </div>
+        <div class="card-footer text-center">
+            <button class="btn btn-outline-primary px-5">Read</button>
+        </div>
+      </div>
+    </div>
+  </div>

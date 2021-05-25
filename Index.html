@@ -35,7 +35,7 @@ section {
 }
 /*Scrollbar özelleştirme*/
 ::-webkit-scrollbar{
-  width:10px;
+  width:8px;
 }
 ::-webkit-scrollbar-thumb{
   background:linear-gradient(to right,#396afc,#2948ff);
@@ -43,6 +43,7 @@ section {
 
 ::-webkit-scrollbar-track{
   background:#fff;
+  
 }
 
 ::-webkit-scrollbar-thumb:hover{
@@ -110,8 +111,12 @@ header .row .col-md-5 {
 
 header .row .col-md-5 img {
   width: 90%;
+  
 }
 
+img{
+  background-image: url('./assets/header-img.png');
+}
 header {
   background: #ff512f;
   /* fallback for old browsers */
@@ -336,12 +341,13 @@ function drawChart3(){
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusamus eum dignissimos ipsa sequi expedita.
           </p>
+          <a href="https://wa.me/+905511841517" class="whatsapp_float" target="_blank"> <i class="fab fa-whatsapp"></i></a>
           <button class="btn btn-light px-5 py-2 primary-btn">
            Continue Free
           </button>
         </div>
         <div class="col-md-5 col-sm-12 header-img">
-          <img src="./assets/header-img.png" alt="Book" />
+         <label>Buraya Image gelecek</label>
         </div>
       </div>
     </div>
@@ -400,7 +406,6 @@ function drawChart3(){
       <div class="row">
         <div class="table-responsive">
           <h1 class="text-center border bg-primary py-2 text-white">Top 100!</h1>
-
           <table class="table table-bordered table-striped  table-hover table-light  table-sm">
             <thead class="thead-dark">
              
@@ -412,137 +417,23 @@ function drawChart3(){
               </tr>
           
             </thead>
-            <tbody>
-              <tr>
-                <th>1</th>
-                <th>Her Şey Seninle Başlar</th>
-                <th>Mümin Sekman</th>
-                <th>8.9</th>
-              </tr>
-              <tr>
-                <th>2</th>
-                <th>Ego Düşmanındır</th>
-                <th>Ryan Holiday</th>
-                <th>7.6</th>
-              </tr>
-              <tr>
-                <th>3</th>
-                <th>50 Soruda Yapay Zeka</th>
-                <th>Cem Say</th>
-                <th>8.3</th>
-              </tr><tr>
-                <th>4</th>
-                <th>Takım Oyunu</th>
-                <th>Seth Godin</th>
-                <th>5.2</th>
-              </tr><tr>
-                <th>5</th>
-                <th>Oblomov</th>
-                <th>Gonçarov</th>
-                <th>6.4</th>
-              </tr><tr>
-                <th>6</th>
-                <th>Atatürk</th>
-                <th>İlber Ortaylı</th>
-                <th>9.1</th>
-              </tr>
+            <tbody class="temp-top-position">
+              {%TOP100%}
+            
             </tbody>
           </table>
         </div>
       </div>
     </div>
     </section>
+
     <hr>
     <h1 class="text-center border bg-primary py-2 text-white">The Library</h1>
     <section id="libraryContent">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="card  m-5">
-              <div class="card-container">
-                <div class="card-header text-center">
-                  <h6>BookName</h6>
-                  <div class="alert alert-primary alert-dismissable fade show py-3 my-3">
-                    <small>Beğenilme Yüzdesi:
-                      <div class="progress my-2">
-                        <div class="progress-bar bg-primary progressbar-striped progress-bar-animated" style="width:89%;">89%</div>
-                      </div>
-                      <span class="badge-primary badge-pill">25 Defa Okundu</span>
-                    </small>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <ul class="list-group ">
-                    <li class="list-group-item">Book: {%NAME%}</li>
-                    <li class="list-group-item">Author: {%AUTHOR%}</li>
-                    <li class="list-group-item">Credit: {%CREDIT%}</li>
-                    <li class="list-group-item">Sort: {%CREDIT%}</li>
-                  </ul>
-                </div>
-                <div class="card-footer text-center">
-                    <button class="btn btn-outline-primary px-5">Read</button>
-                </div>
-              </div>
-            </div>
+        <div class="row">     
+              {%LIBRARY%}
           </div>
-          <div class="col-sm-4">
-            <div class="card m-5">
-              <div class="card-container ">
-                <div class="card-header text-center">
-                  <h6>BookName</h6>
-                  <div class="alert alert-primary alert-dismissable fade show py-3 my-3">
-                    <small>Beğenilme Yüzdesi:
-                      <div class="progress my-2">
-                        <div class="progress-bar bg-primary progressbar-striped progress-bar-animated" style="width:89%;">89%</div>
-                      </div>
-                      <span class="badge-primary badge-pill">25 Defa Okundu</span>
-                    </small>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <ul class="list-group ">
-                    <li class="list-group-item">Book: {%NAME%}</li>
-                    <li class="list-group-item">Author: {%AUTHOR%}</li>
-                    <li class="list-group-item">Credit: {%CREDIT%}</li>
-                    <li class="list-group-item">Sort: {%CREDIT%}</li>
-                  </ul>
-                </div>
-                <div class="card-footer text-center">
-                    <button class="btn btn-outline-primary px-5">Read</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card m-5">
-              <div class="card-container ">
-                <div class="card-header text-center">
-                  <h6>BookName</h6>
-                  <div class="alert alert-primary alert-dismissable fade show py-3 my-3">
-                    <small>Beğenilme Yüzdesi:
-                      <div class="progress my-2">
-                        <div class="progress-bar bg-primary progressbar-striped progress-bar-animated" style="width:89%;">89%</div>
-                      </div>
-                      <span class="badge-primary badge-pill">25 Defa Okundu</span>
-                    </small>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <ul class="list-group ">
-                    <li class="list-group-item">Book: {%NAME%}</li>
-                    <li class="list-group-item">Author: {%AUTHOR%}</li>
-                    <li class="list-group-item">Credit: {%CREDIT%}</li>
-                    <li class="list-group-item">Sort: {%CREDIT%}</li>
-                  </ul>
-                </div>
-                <div class="card-footer text-center">
-                    <button class="btn btn-outline-primary px-5">Read</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-         
         </div>
       </div>
     </section>
@@ -595,10 +486,10 @@ function drawChart3(){
             <h4 class="text-light">Follow Us</h4>
             <p class="text-muted">Let us be social</p>
             <div class="column ml-auto text-light">
-              <i class="fab fa-lg fa-linkedin"></i>
-              <i class="fab fa-lg fa-instagram"></i>
-              <i class="fab m-n2 fa-lg fa-twitter"></i>
-              <i class="fab  fa-lg fa-youtube"></i>
+              <a href="#"><i class="fab m-1 fa-lg fa-linkedin"></i></a>
+              <a href="#"><i class="fab m-1 fa-lg fa-instagram"></i></a>
+              <a href="#"><i class="fab m-1 fa-lg fa-twitter"></i></a>
+              <a href="#"><i class="fab m-1  fa-lg fa-youtube"></i></a>
             </div>
           </div>
         </div>
