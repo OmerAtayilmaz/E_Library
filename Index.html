@@ -200,7 +200,39 @@ footer .column i + i {
   align-items: center;
   border:0 !important;
 }
+/*WP*/
+/* for desktop */
+.whatsapp_float {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+        font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+        z-index:100;
+}
 
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 22px;
+    }
+}
 </style>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
@@ -341,7 +373,7 @@ function drawChart3(){
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusamus eum dignissimos ipsa sequi expedita.
           </p>
-          <a href="https://wa.me/+905511841517" class="whatsapp_float" target="_blank"> <i class="fab fa-whatsapp"></i></a>
+          
           <button class="btn btn-light px-5 py-2 primary-btn">
            Continue Free
           </button>
@@ -399,6 +431,7 @@ function drawChart3(){
       </div>
     </div>
   </div>
+  <a href="https://wa.me/+905511841517" class="whatsapp_float" target="_blank"> <i class="fab fa-whatsapp whatsapp-icon"></i></a>
   <main>
     <hr>
     <section id="tableContent">
