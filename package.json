@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "start":"node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,4 +17,8 @@
     "url": "https://github.com/OmerAtayilmaz/E_Library/issues"
   },
   "homepage": "https://github.com/OmerAtayilmaz/E_Library#readme"
+  ,
+  "engines":{
+    "node":">=10.0.0"
+  }
 }
