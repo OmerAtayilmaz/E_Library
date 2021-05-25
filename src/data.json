@@ -24,7 +24,7 @@
       "read": 10
     },
     {
-      "id": 3,
+      "id": 4,
       "book": "OBLOMOV",
       "author": "Gonçarov",
       "Credit": "7.2",
@@ -32,14 +32,7 @@
       "read": 30
     },
     {
-      "id": 3,
-      "book": "Takım Oyunu",
-      "author": "Seth Godin",
-      "Credit": "5.7",
-      "sort": "Kişisel Gelişim",
-      "read": 15
-    }, {
-      "id": 3,
+      "id": 5,
       "book": "Diriliş",
       "author": "Tolstoy",
       "Credit": "7.4",
@@ -47,7 +40,7 @@
       "read": 18
     },
     {
-      "id": 3,
+      "id": 6,
       "book": "Atatürk",
       "author": "İlber Ortaylı",
       "Credit": "9.1",

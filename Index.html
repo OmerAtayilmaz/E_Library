@@ -30,7 +30,7 @@ section {
   --Patua: "Patua One", cursive;
   --Lobster: "lobster", cursive;
   --light-black: #2e2c2caf;
-  --bggradient: linear-gradient(to bottom, #2427dd, #030186);
+  --bggradient: linear-gradient(to top,#2948ff,#5856ff) !important;
   --light-gray: rgba(255, 255, 255, 0.877);
 }
 /*Scrollbar özelleştirme*/
@@ -233,6 +233,71 @@ footer .column i + i {
         font-size: 22px;
     }
 }
+.card{
+  border:none !important;
+  align-items: center !important;
+}
+.card-container{
+  width:350px !important;
+  border-radius: 2rem;
+  border:0.5rem double #2948ff;
+  box-shadow:5px 5px 3px #838383 !important;
+  transition:0.5s;
+}
+.card-container:hover{
+  box-shadow:6px 6px 4px #2948ff !important;
+  transition:0.5s;
+  margin-top:-3px !important;
+}
+
+.card-header > h6{
+  font-size:16px;
+  font-weight: lighter;
+  text-shadow: 2px 2px 5px #5856ff !important;
+}
+.card-body{
+  background-image: linear-gradient(to top,#2948ff,#5856ff) !important;
+}
+
+.list-group-item {
+border:1px #fff !important;
+margin-top:2px;
+font-weight: lighter;
+}
+
+.bg-custom
+{
+  background-image: linear-gradient(to right,#2948ff,#5856ff) !important;
+}
+
+/*Custom modal*/
+.modal{
+  background-image: linear-gradient(to right,#2948ff,#5856ff) !important;
+}
+
+.modal-content{
+  box-shadow:4px 4px 2px #333;
+  transition:0.5s;
+  align-items: center !important;
+}
+.modal-content:hover{
+  transition:0.5s;
+  margin-top:-5px;
+ 
+}
+.form-group>input{
+  background-image: linear-gradient(to right,#2948ff,#5856ff) !important;
+  color: #fff !important;;
+  font-weight:lighter;
+}
+.form-group>input:focus{
+  color: #fff !important;;
+}
+.custom-h4{
+  text-shadow: 2px 2px 5px #5856ff !important;
+  
+}
+
 </style>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
@@ -379,7 +444,7 @@ function drawChart3(){
           </button>
         </div>
         <div class="col-md-5 col-sm-12 header-img">
-         <label>Buraya Image gelecek</label>
+         
         </div>
       </div>
     </div>
@@ -389,17 +454,17 @@ function drawChart3(){
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content text-center">
         <div class="modal-header">
-         <h4>Sign In</h4>
+         <h4 class="custom-h4">Sign In</h4>
          <button class="close ml-5" data-dismiss="modal" type="button">&times;</button>
         </div>
         <div class="modal-body">
           <form class="form-group">
             <label for="usr" class="custom-label">Username</label>
-            <input type="text" class="form-control" placeholder="Enter Username" id="usr"/>
+            <input type="text" class="form-control"  id="usr"/>
           </form>
           <form class="form-group">
             <label for="psw"  class="custom-label" >Password</label>
-            <input type="password" placeholder="Enter Password" class="form-control" id="psw"/>
+            <input type="password"  class="form-control" id="psw"/>
           </form>
         </div>
         <div class="modal-footer">
@@ -412,17 +477,17 @@ function drawChart3(){
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content text-center">
         <div class="modal-header">
-         <h4>Sign Up</h4>
+         <h4 class="custom-h4">Sign Up</h4>
          <button class="close ml-5" data-dismiss="modal" type="button">&times;</button>
         </div>
         <div class="modal-body">
           <form class="form-group">
             <label for="usr" class="custom-label">Username</label>
-            <input type="text" class="form-control" placeholder="Enter Username" id="usr"/>
+            <input type="text" class="form-control"  id="usr"/>
           </form>
           <form class="form-group">
             <label for="psw"  class="custom-label" >Password</label>
-            <input type="password" placeholder="Enter Password" class="form-control" id="psw"/>
+            <input type="password" class="form-control" id="psw"/>
           </form>
         </div>
         <div class="modal-footer">
@@ -438,7 +503,7 @@ function drawChart3(){
     <div class="container-fluid">
       <div class="row">
         <div class="table-responsive">
-          <h1 class="text-center border bg-primary py-2 text-white">Top 100!</h1>
+          <h1 class="text-center border bg-custom py-2 text-white">Top 100!</h1>
           <table class="table table-bordered table-striped  table-hover table-light  table-sm">
             <thead class="thead-dark">
              
@@ -461,7 +526,7 @@ function drawChart3(){
     </section>
 
     <hr>
-    <h1 class="text-center border bg-primary py-2 text-white">The Library</h1>
+    <h1 class="text-center border bg-custom py-2 text-white">The Library</h1>
     <section id="libraryContent">
       <div class="container-fluid">
         <div class="row">     
@@ -471,17 +536,17 @@ function drawChart3(){
       </div>
     </section>
     <hr>
-    <h1 class="text-center border bg-primary py-2 text-white">Statistics</h1>
+    <h1 class="text-center border bg-custom py-2 text-white">Statistics</h1>
     <section id="statsContent">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-md-4">
             <div id="chart_div"></div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-4">
             <div id="chart_div2"></div>
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-4">
             <div id="chart_div3"></div>
           </div>
         </div>

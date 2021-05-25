@@ -11,6 +11,7 @@ const superagent=require('superagent');
 const axios=require('axios');
 //developer modules
 const replaceTemp=require('./replaceTemplate');
+const { resolve } = require('path');
 const data=fs.readFileSync(`${__dirname}/src/data.json`,'utf-8');
 const dataOBJ=JSON.parse(data);
 
@@ -19,9 +20,14 @@ const tempIndex=fs.readFileSync(`${__dirname}/index.html`,'utf-8');
 const tempLibrary=fs.readFileSync(`${__dirname}/templates/temp-library.html`,'utf-8');
 const tempTop100=fs.readFileSync(`${__dirname}/templates/temp-top.html`,'utf-8');
 
+
+
 const server = http.createServer(); //server oluşturduk
-let link="https://api.jsonbin.io/b/60ac8615e2fa0d4db8adcce1/4";
-const getData=(link)=>
+ let link="https://api.jsonbin.io/b/60ac8615e2fa0d4db8adcce1/4";
+
+
+//NodeJS
+  const getData=(link)=>
 {
  return new Promise((resolve,reject)=>{
      fetch(link)
@@ -29,18 +35,19 @@ const getData=(link)=>
      .then(data=>resolve(data));
  })
 };
-    
+  
 
 
 
 
-server.on('request',(req,res)=>{
+ server.on('request',(req,res)=>{
     const pathName=req.url;
     if(req.url==='/'||pathName=='/index'){
        res.writeHead(200,{
            'Content-type':'text/html'
        });
    
+
     getData(link).then(data=>{
        let  html=data.map(el=>replaceTemp(tempLibrary,el)).join('');
        
@@ -50,7 +57,7 @@ server.on('request',(req,res)=>{
        let output = tempIndex.replace('{%LIBRARY%}',html);
            output=output.replace('{%TOP100%}',html2);
        res.end(output);
-    });
+    }); 
     
   
     }
@@ -65,4 +72,4 @@ server.on('request',(req,res)=>{
 
 server.listen(8080,'127.0.0.1',()=>{
     console.log('Port Başarıyla çalıştırıldı.');
-});
+}); 
